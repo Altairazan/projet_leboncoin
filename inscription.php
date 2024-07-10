@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inscription - lebonchoix</title>
+    <link rel="stylesheet" href="style-inscription.css">
 </head>
+<header>lebonchoix</header>
 <body>
-    <h1>Inscription</h1><hr>
+    <h1>Incription</h1>
     <form action="" method="post" enctype="multipart/form-data">
         <input type="text" name="nom" placeholder="Nom : " required><br><br>
         <input type="text" name="prenom" placeholder="Prénom : " required><br><br>
