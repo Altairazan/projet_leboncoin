@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Inscription</h1><hr>
-    <form action="" method="post" enctype="multipart/form-data">
-        <input type="text" name="nom" placeholder="Nom : " required><br><br>
-        <input type="text" name="prenom" placeholder="Prénom : " required><br><br>
-        <input type="email" name="email" placeholder="Adresse e-mail : " required><br><br>
-        <input type="password" name="mdp" placeholder="Mot de passe : " required><br><br>
-        <input type="file" name="avatar"><br><br>
-        <input type="submit" value="S'inscrire" name="bout">
-    </form><hr>
+    <header>
+        <h1>Inscription</h1><hr>
+    </header>
+    <section>
+        <form action="" method="post" enctype="multipart/form-data">
+            <input type="text" name="nom" placeholder="Nom : " required><br><br>
+            <input type="text" name="prenom" placeholder="Prénom : " required><br><br>
+            <input type="email" name="email" placeholder="Adresse e-mail : " required><br><br>
+            <input type="password" name="mdp" placeholder="Mot de passe : " required><br><br>
+            <input type="file" name="avatar"><br><br>
+            <input type="submit" value="S'inscrire" name="bout">
+        </form><hr>
+    </section>
 
     <?php
     if(isset($_POST['bout'])){ // si le bouton est cliqué
