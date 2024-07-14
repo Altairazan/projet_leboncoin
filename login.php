@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
-    <link rel="stylesheet" href="register.css">
+    <title>Connexion - lebonchoix</title>
+    <link rel="stylesheet" href="login.css">
 </head>
-<header>
-    <img src="images/logo.png" alt="Logo Lebonchoix" class="logo">
-</header>
 <body>
-    
-    <main class="main-container">
-        <div class="form-container">
-            <h1><b>Inscription</b></h1>
-            <form action="" method="post">
-                <input type="text" name="nom" placeholder="Nom" required><br><br>
-                <input type="text" name="prenom" placeholder="Prénom" required><br><br>
-                <input type="email" name="email" placeholder="Adresse e-mail" required><br><br>
-                <input type="password" name="mdp" placeholder="Mot de passe" required><br><br>
-                <input type="file" name="avatar"><br><br>
-                <input type="submit" value="S'inscrire" name="bout">
+    <div class="login-container">
+        <div class="login-box">
+        
+            <h1><img src="images/logo.png" alt="Logo lebonchoix" class="logo-image"></h1>
+
+            <form action="login.php" method="post">
+                <input type="email" name="email" placeholder="Adresse e-mail" required>
+                <input type="password" name="password" placeholder="Mot de passe" required>
+                <div class="remember-me">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember"><strong>Se souvenir de moi</strong></label>
+                </div>
+                <button type="submit">Se Connecter</button>
             </form>
+            <hr>
+            <a href="register.php"><strong>Créez un compte </strong> </a>
         </div>
-    </main>
-</body>
-</html>
-<?php
+    </div>
+
+    <?php
     if(isset($_POST['bout'])){ // si le bouton est cliqué
-        var_dump($_POST);
-        var_dump($_FILES);
+        
 
         echo $_POST["nom"]."<br>";
         // if($_FILES["avatar"]["size"] > 5000){
@@ -55,5 +54,9 @@
                     values ('$nom','$prenom','$email','$mdp','$nom.jpg',0)";
         $resultat = mysqli_query($id,$requete);  
             }
-    }
+        }
     ?>
+
+
+</body>
+</html>
